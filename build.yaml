@@ -6,7 +6,7 @@ include:
   - board: nice_nano_v2
     shield: sweep_central_dongle dongle_display
     artifact-name: sweep_central_dongle
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    
  # - board: nice_nano_v2
  #   shield: sweep_central_left led_indicator
  #  artifact-name: sweep_central_left
