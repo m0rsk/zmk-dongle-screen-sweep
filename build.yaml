@@ -10,18 +10,20 @@ include:
  # - board: nice_nano_v2
  #   shield: sweep_central_left led_indicator
  #  artifact-name: sweep_central_left
-  - board: nice_nano_v2
-    shield: sweep_peripheral_left led_indicator
-    artifact-name: sweep_peripheral_left
-  - board: nice_nano_v2
-    shield: sweep_peripheral_right led_indicator
-    artifact-name: sweep_peripheral_right
+
+ # - board: nice_nano_v2
+ #   shield: sweep_peripheral_left led_indicator
+ #   artifact-name: sweep_peripheral_left
+ 
+ # - board: nice_nano_v2
+ #   shield: sweep_peripheral_right led_indicator
+ #   artifact-name: sweep_peripheral_right
     
  # - board: nice_nano_v2
  #   shield: sweep_central_left led_indicator
  #   cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
  #   artifact-name: sweep_central_left_with_logging
 
-  # reset
-  - board: nice_nano_v2
-    shield: settings_reset
+ # reset
+ # - board: nice_nano_v2
+ #   shield: settings_reset
