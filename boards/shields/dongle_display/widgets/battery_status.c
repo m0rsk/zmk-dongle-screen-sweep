@@ -99,8 +99,8 @@ int zmk_widget_peripheral_battery_status_init(struct zmk_widget_peripheral_batte
 
         lv_canvas_set_buffer(image_canvas, battery_image_buffer[i], 5, 8, LV_IMG_CF_TRUE_COLOR);
 
-        lv_obj_align(image_canvas, LV_ALIGN_TOP_RIGHT, -2, i * 10);
-        lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -9, i * 10);
+        lv_obj_align(image_canvas, LV_ALIGN_TOP_RIGHT, -1, i * 10);
+        lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -8, i * 10);
     }
 
     sys_slist_append(&widgets, &widget->node);
