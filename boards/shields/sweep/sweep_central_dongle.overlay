@@ -43,7 +43,7 @@
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
-        ready-time-ms = <200>
+        ready-time-ms = <200>;
         segment-remap;
         com-invdir;
         inversion-on;
