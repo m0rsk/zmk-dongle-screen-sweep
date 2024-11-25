@@ -37,12 +37,13 @@
     oled: SSD1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
-        width = <129>;
+        width = <128>;
         height = <64>;
         segment-offset = <1>;
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
+        ready-time-ms = <200>
         segment-remap;
         com-invdir;
         inversion-on;
