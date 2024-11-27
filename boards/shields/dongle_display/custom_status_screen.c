@@ -46,8 +46,10 @@ lv_obj_t *zmk_display_status_screen() {
     //zmk_widget_bongo_cat_init(&bongo_cat_widget, screen);
     //lv_obj_align(zmk_widget_bongo_cat_obj(&bongo_cat_widget), LV_ALIGN_BOTTOM_RIGHT, 0, -7);
 
+    
+
     zmk_widget_sunfire_init(&sunfire_widget, screen);
-    //lv_obj_align(zmk_widget_sunfire_obj(&sunfire_widget), LV_ALIGN_BOTTOM_RIGHT, 0, -7);
+    lv_obj_align(zmk_widget_sunfire_obj(&sunfire_widget), LV_ALIGN_BOTTOM_RIGHT, 0, -7);
 
     
     zmk_widget_modifiers_init(&modifiers_widget, screen);
