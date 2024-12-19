@@ -4,7 +4,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 
 
@@ -196,6 +201,7 @@
 #define NUM 3
 #define COMP 4
 #define CFG 5
+#define MOUSE 6
 #define copy &c_C
 #define cut &c_X
 #define all &c_A
@@ -220,6 +226,7 @@
       compatible = "zmk,behavior-tri-state";
       #binding-cells = <0>;
      bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+     ignored-key-positions = <12 13>;
      
     };
   
@@ -238,6 +245,11 @@
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&swapper>;
+        };
+        bootloader {
+            timeout-ms = <50>;
+            key-positions = <14 15 16 17>;
+            bindings = <&bootloader>;
         };
  };
  };
@@ -328,9 +340,9 @@
         >;
         };
         //
-		//
-		//
-		compose_layer {
+	//
+	//
+	compose_layer {
 
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -355,15 +367,33 @@
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-            &sys_reset     &trans     &trans     &trans   &bt BT_SEL 0     &trans     &trans     &trans     &trans      &sys_reset
+            &sys_reset &trans     &trans     &trans   &bt BT_SEL 0     &trans     &trans     &trans     &trans     &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans   &bt BT_SEL 1     &trans     &trans     &trans     &trans    &bootloader
+          &bootloader  &trans     &trans    &LT MOUSE &bt BT_SEL 1     &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans   &bt BT_CLR &bt BT_SEL 2     &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        >;
+        };
+
+        mouse_layer {
+
+        bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans    &mkp MCLK   &mkp LCLK  &mkp RCLK     &trans     &trans  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans      &trans     &trans     &trans     &trans      &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
         >;
         };
