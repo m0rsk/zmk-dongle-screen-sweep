@@ -272,7 +272,7 @@
             DE_H        DE_I       DE_E      DE_A        DE_O           DE_D       DE_T       DE_R       DE_N      DE_S
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
-	          DE_K        DE_Y       DE_DOT   DE_QUOT      DE_X           DE_J       DE_V       DE_W       DE_B      DE_Z
+            DE_K        DE_Y       DE_DOT   DE_QUOT      DE_X           DE_J       DE_V       DE_W       DE_B      DE_Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &mo 1         OS_SHFT       &kp SPACE  &mo 2 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -280,7 +280,7 @@
             >;
         };
 
-		nav_layer {
+	nav_layer {
 
 		bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -370,7 +370,7 @@
             &sys_reset &trans     &trans     &trans   &bt BT_SEL 0     &trans     &trans     &trans     &trans     &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans    &LT MOUSE &bt BT_SEL 1     &trans     &trans     &trans     &trans    &bootloader
+          &bootloader  &trans     &trans    &LT 6     &bt BT_SEL 1     &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans   &bt BT_CLR &bt BT_SEL 2     &trans     &trans     &trans     &trans     &trans
@@ -385,7 +385,7 @@
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &trans    &mkp MCLK   &mkp LCLK  &mkp RCLK     &trans     &trans  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans
+            &to 0    &mkp MCLK   &mkp LCLK  &mkp RCLK     &trans     &trans  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans      &trans     &trans     &trans     &trans      &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
