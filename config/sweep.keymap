@@ -251,6 +251,11 @@
             key-positions = <14 15 16 17>;
             bindings = <&bootloader>;
         };
+        mouse {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&tog 6>;
+        };
  };
  };
 //
@@ -274,7 +279,7 @@
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
             DE_K        DE_Y       DE_DOT   DE_QUOT      DE_X           DE_J       DE_V       DE_W       DE_B      DE_Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &mo 1         OS_SHFT       &kp SPACE  &mo 2 
+                                             &mo 1        OS_SHFT       &kp SPACE  &mo 2 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
             >;
@@ -347,7 +352,7 @@
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    Ü     │          │          │          │   │          │          │          │          │          │
-             &trans     DE_UDIA    &lt 6     &trans     &trans        &trans      &trans     &trans     &trans     &trans
+             &trans     DE_UDIA    &trans     &trans     &trans        &trans      &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │    Ä     │     Ö    │   │          │          │          │          │    ß     │
              &trans     &trans     &trans    DE_ADIA     DE_ODIA       &trans      &trans     &trans     &trans      DE_SS
@@ -370,7 +375,7 @@
             &sys_reset &trans     &trans     &trans   &bt BT_SEL 0     &trans     &trans     &trans     &trans     &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans    &to 6     &bt BT_SEL 1     &trans     &trans     &trans     &trans    &bootloader
+          &bootloader  &trans     &trans    &trans     &bt BT_SEL 1     &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans   &bt BT_CLR &bt BT_SEL 2     &trans     &trans     &trans     &trans     &trans
@@ -385,7 +390,7 @@
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &to 0     &mkp MCLK   &mkp LCLK  &mkp RCLK     &trans     &trans  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans
+            &trans     &mkp MCLK   &mkp LCLK  &mkp RCLK     &trans     &trans  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans      &trans     &trans     &trans     &trans      &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
@@ -393,7 +398,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &trans     &trans         &trans     &trans
+                                              &trans     &tog 6         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
         >;
         };
