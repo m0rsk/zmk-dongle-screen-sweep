@@ -370,7 +370,7 @@
             &sys_reset &trans     &trans     &trans   &bt BT_SEL 0     &trans     &trans     &trans     &trans     &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans    &lt 6     &bt BT_SEL 1     &trans     &trans     &trans     &trans    &bootloader
+          &bootloader  &trans     &trans    &to 6     &bt BT_SEL 1     &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans   &bt BT_CLR &bt BT_SEL 2     &trans     &trans     &trans     &trans     &trans
@@ -385,7 +385,7 @@
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &to 0    &mkp MCLK   &mkp LCLK  &mkp RCLK     &trans     &trans  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans
+            &tog 0    &mkp MCLK   &mkp LCLK  &mkp RCLK     &trans     &trans  &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans      &trans     &trans     &trans     &trans      &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
