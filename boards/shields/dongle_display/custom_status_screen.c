@@ -27,18 +27,6 @@ static struct zmk_widget_modifiers modifiers_widget;
 static struct zmk_widget_hid_indicators hid_indicators_widget;
 #endif
 
-#include <lvgl.h> // Bilddaten in hexadezimaler Darstellung 
-static const lv_color_t image_data[] = { 
-// 'logo', 20x24px
-const unsigned char epd_bitmap_logo [] PROGMEM = {
-	0x00, 0x20, 0x00, 0x00, 0x30, 0x00, 0x00, 0x78, 0x00, 0x00, 0x7c, 0x00, 0x00, 0xfc, 0x00, 0x01, 
-	0xfe, 0x00, 0x03, 0xfe, 0x00, 0x07, 0xfe, 0x00, 0x0f, 0xff, 0x00, 0x1f, 0xfe, 0x00, 0x3f, 0xfe, 
-	0x40, 0x7f, 0xfe, 0x60, 0x7f, 0xfc, 0xe0, 0xff, 0xfd, 0xf0, 0xff, 0xf9, 0xf0, 0xff, 0xf3, 0xf0, 
-	0xff, 0xf7, 0xf0, 0xff, 0xe7, 0xf0, 0x7f, 0xef, 0xf0, 0x7f, 0xef, 0xe0, 0x3f, 0xdf, 0xc0, 0x1f, 
-	0xdf, 0xc0, 0x0f, 0xdf, 0x00, 0x03, 0xdc, 0x00
-};
-};
-
 
 
 lv_style_t global_style;
@@ -60,13 +48,7 @@ lv_obj_t *zmk_display_status_screen() {
     //zmk_widget_bongo_cat_init(&bongo_cat_widget, screen);
     //lv_obj_align(zmk_widget_bongo_cat_obj(&bongo_cat_widget), LV_ALIGN_BOTTOM_RIGHT, 0, -7);
 
-     // Hinzufügen des neuen Bildes 
-    lv_obj_t *image_canvas = lv_canvas_create(screen);
-    lv_canvas_set_buffer(image_canvas, (lv_color_t *)image_data, 128, 128, LV_IMG_CF_TRUE_COLOR); 
-    lv_obj_align(image_canvas, LV_ALIGN_BOTTOM_RIGHT, 0, -7); 
-
-
-    
+         
     zmk_widget_modifiers_init(&modifiers_widget, screen);
     lv_obj_align(zmk_widget_modifiers_obj(&modifiers_widget), LV_ALIGN_BOTTOM_LEFT, 0, 0);
 
@@ -77,7 +59,7 @@ lv_obj_t *zmk_display_status_screen() {
 
     zmk_widget_layer_status_init(&layer_status_widget, screen);
     lv_obj_align(zmk_widget_layer_status_obj(&layer_status_widget), LV_ALIGN_BOTTOM_LEFT, 2, -18);
-   // lv_obj_align_to(zmk_widget_layer_status_obj(&layer_status_widget), zmk_widget_bongo_cat_obj(&bongo_cat_widget), LV_ALIGN_BOTTOM_LEFT, 0, 5);
+    lv_obj_align_to(zmk_widget_layer_status_obj(&layer_status_widget), zmk_widget_bongo_cat_obj(&bongo_cat_widget), LV_ALIGN_BOTTOM_LEFT, 0, 5);
 
     zmk_widget_peripheral_battery_status_init(&peripheral_battery_status_widget, screen);
     lv_obj_align(zmk_widget_peripheral_battery_status_obj(&peripheral_battery_status_widget), LV_ALIGN_TOP_LEFT, 0, -2);
