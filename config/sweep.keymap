@@ -297,7 +297,7 @@
             &kp ESC     &kp TAB    &kp ENTER  &kp DEL  &kp C_VOL_UP      &mo CFG    &kp HOME   &kp UP    &kp END     &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │    ß     │
-            OS_SHFT    OS_CTRL     OS_ALT     OS_CMD  &kp C_VOL_UP     &kp CAPS   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC
+            OS_SHFT    OS_CTRL     OS_ALT     OS_CMD  &kp C_VOL_DOWN     &kp CAPS   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
               all        cut       paste       copy     &kp C_PP       &trans    &kp PG_DN   &kp PG_UP   &trans   &kp ENTER
@@ -314,15 +314,15 @@
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-             &kp ESC    DE_LBRC    DE_LCBR    DE_LPRN    DE_TILD       DE_CIRC     DE_RPRN    DE_RCBR    DE_RBRC  DE_GRV
+             DE_LABK    DE_LBRC    DE_LCBR    DE_LPRN    DE_TILD       DE_CIRC     DE_RPRN    DE_RCBR    DE_RBRC    DE_RABK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │    ß     │
-           DE_MINS     DE_ASTR     DE_EQL    DE_UNDS    DE_DLR         DE_HASH     OS_CMD     OS_ALT     OS_CTRL   OS_SHFT
+        //│          │          │          │          │          │   │          │          │          │          │          │
+           DE_MINS     DE_ASTR     DE_EQL    DE_UNDS    DE_DLR         DE_HASH     DE_DQUO    DE_AMPR    DE_QUES    DE_EXLM
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
             DE_PLUS    DE_PIPE     DE_AT      DE_SLSH    DE_PERC       DE_EURO     DE_BSLS    DE_AMPR    DE_QUES   DE_EXLM
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &trans    &trans  	      &trans     &trans
+                                              &trans    &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
         >;
