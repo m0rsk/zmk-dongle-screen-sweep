@@ -297,7 +297,7 @@
             &kp ESC     &kp TAB    &kp ENTER  &kp DEL  &kp C_VOL_UP      &mo CFG    &kp HOME   &kp UP    &kp END     &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │    ß     │
-            OS_SHFT    OS_CTRL     OS_ALT     OS_CMD  &kp C_VOL_DOWN     &kp CAPS   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC
+            OS_SHFT    OS_CTRL     OS_ALT     OS_CMD  &kp C_VOL_DN     &kp CAPS   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
               all        cut       paste       copy     &kp C_PP       &trans    &kp PG_DN   &kp PG_UP   &trans   &kp ENTER
