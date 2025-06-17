@@ -300,7 +300,7 @@
             OS_SHFT    OS_CTRL     OS_ALT     OS_CMD  &kp C_VOL_DN     &kp CAPS   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
-              all        cut       paste       copy     &kp C_PP       &trans    &kp PG_DN   &kp PG_UP   &trans   &kp ENTER
+              all        cut       paste       copy     &kp C_PP       &trans    &kp PG_DN   &kp PG_UP   &studio_unlock   &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans      &trans       &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
