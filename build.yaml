@@ -1,7 +1,6 @@
 # This file generates the GitHub Actions matrix
 ---
 include:
-  
   # sweep
   - board: nice_nano//zmk
     shield: sweep_dongle dongle_display
